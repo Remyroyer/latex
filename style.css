@@ -29,10 +29,22 @@
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 } 
 #bg_left, #bg_right, #id_cards{
-    background-color:var(--gray-dark);
+    background-color:#17A2B8;/*var(--gray-dark);*/
 }
 
-#id_soustitre, #id_border, #id_line_3, #id_butt_1, #id_butt_2, #id_butt_3{
+#id_powered
+{
+    background-color:var(--gray-dark);
+    color:#17A2B8;
+}
+
+#id_reload
+{
+    cursor: pointer;
+    background-color:#17A2B8;
+}
+
+#id_soustitre, #id_border, #id_line_3, #id_butt_1, #id_butt_2, #id_butt_3, #id_butt_4{
     background-color:var(--gray);
 }
 
@@ -45,7 +57,7 @@
 }
 
 body{
-    background-color:var(--gray-dark);
+    background-color:#17A2B8;/*var(--gray-dark)*/
 }
 
 #id_welcome, #id_line_1, #id_line_2, #id_lead, #id_line_4, #id_line_5, #id_line_6, #id_line_7{
@@ -78,10 +90,200 @@ section {
     width: 55%;
     height: 100%;
     transform: translate(120%, 60%);
-    background-color: var(--gray-dark);
+    background-color:#17A2B8;/* var(--gray-dark);*/
 }
 
 .img-fluid{
     width: 300px;
     height: auto;
+}
+
+#input_pre
+{
+    font-size: 40px;
+    display: inline-block;
+    width: 250px;
+    height: 80px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+    padding-left: 10px;
+    margin: 20px auto;
+    align-items: center;
+}
+
+#txt_score
+{
+    font-size:  30px ;
+}
+
+#input_score
+{
+    display: inherit;
+    display: inline-block;
+    width: 250px;
+    font-size:  60px ;
+    text-align: center;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+}
+
+#id_container
+{
+    text-align: center;
+}
+
+#avatar_1
+{
+    display: inherit;
+    display: none;
+    width: 158px;
+    height: 330px;
+    /* text-align: left; */
+    margin: auto;
+}
+
+/* ----------------------Avatar homme------------------ */
+.avatarH
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image:  url('img/avatarH.png');
+    z-index: 1;
+}
+
+.chapeauH
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/chapeauH.png');
+    z-index: 2;
+}
+
+.fouetH
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/fouetH.png');
+    display: none;
+    z-index: 6;
+}
+
+.jeanH
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/jeanH.png');
+    z-index: 3;
+}
+
+.tshirtH
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/tshirtH.png');
+    z-index: 4;
+}
+
+.vesteH
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/VesteH.png');
+    z-index: 5;
+}
+/* ------------------------------------ */
+
+/*----------------------Avatar Femme------------------*/
+.avatarF
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/avatarF.png');
+    z-index: 1;
+}
+
+.chapeauF
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/chapeauF.png');
+    z-index: 2;
+}
+
+.jeanF
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/jeanF.png');
+    z-index: 3;
+}
+
+.vesteF
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/vesteF.png');
+    z-index: 5;
+}
+
+.tshirtF
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/tshirtF.png');
+    z-index: 4;
+}
+
+.fouetF
+{
+    background-size: contain;
+    height: 330px;
+    width: 158px;
+    position: absolute;
+    background-image: url('img/fouetF.png');
+    display: none;
+    z-index: 6;
+}
+/* -------------------------- */
+#middle1_contenant
+{
+    width: 180px;
+    margin: auto;
+    align-content: center;
+}
+
+#id_worksite
+{
+    color:red;
+    font-size:22px
+}
+
+#id_videocontainer
+{
+   align-items: center;
 }

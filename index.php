@@ -8,7 +8,8 @@
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    
-        <script src="script.js" async></script>
+        <!-- <script src="script.js" ?v=2></script> -->
+        <script type="text/javascript" src="script.js" ?v=2></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
     
@@ -27,50 +28,54 @@
                   </section>
             </div>
                 <div class="col-8 bg-info" id="id_border">
-                    <div class="row-6" id="id_soustitre"><h2>Jeu du pendu</h2></div>
+                    <div class="row-6" id="id_soustitre"><h2><div onclick="fautload()" id="id_reload">Jeu du pendu</div></h2></div><div><br></div>
                         <div class="row-6 p-2 rounded-top offset-2" id="id_welcome"><h2>Bonjour & Bienvenue,</h2></div>
                         <div class="row-5 rounded-left" id="id_line_1">
                             <div class="row-6 rounded-left p-3" id="id_line_2"></div>
                                 <input type="text" class="form-control col-8 offset-2" placeholder="Votre nom" aria-label="Username" required>
                                 <div class="col-9 p-4">
 
-                                    <div class="container offset-1">
+                                    <div class="container offset-1" id="id_container">
                                         <div class="card"><!--style="width: 15rem;"-->
-                                            <div class="card-header text-center">
-                                                Définissez le sexe de votre avatar!
+                                            <div class="card-header text-center" id="id_legend">
+                                            <fieldset>
+                                            <legend>Définissez le sexe de votre avatar!</legend>
                                             </div>
                                             <div class="card-body">
-                                                <div class="form-check offset-3">
-                                                    <input class="form-check-input" type="radio" name="Féminin" id="flexRadioDefault1">
-                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                <div class="form-check offset-3" id="id_offset">
+                                                    <input class="form-check-input" type="radio" name="sexe" id="female" value="Female" checked=checked>
+                                                    <label class="form-check-label" for="female" id="label_female">
                                                       Féminin
                                                     </label>
                                                   </div>
                                                 <div class="form-check offset-3">
-                                                    <input class="form-check-input" type="radio" name="Féminin" id="flexRadioDefault2" checked>
-                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                    <input class="form-check-input" type="radio" name="sexe" value="Male" id="male">
+                                                    <label class="form-check-label" for="male" id="label_male">
                                                       Masculin
                                                     </label>
                                                 </div>
 
                                             </div>
-                                           
+                                            </fieldset>
                                         </div>
                                     </div>  
                                       
                                 </div>
                                 <div class="row-6 rounded-top p-3" id="id_line_3"></div>
-                        </div>
-                        <div class="offset-1 col-10 row-6 rounded-top justify-content-center lead" id="id_lead">
+                        </div><div><br></div>
+                        <div class="offset-1 col-10 row-6 rounded justify-content-center lead" id="id_lead">
                             Sébastien et Rémy ont l'honneur de vous présenter un jeu style ''pendu'' !
                             Vous devrez effectivement trouver et écrire des mots afin d'éviter de dénuder votre avatar !
                             Mais puisque nous sommes quand même sympa, et qu'on veux vous laisser un chance, nous vous donnons quelques
                             régles a respecter pour avoir une chance de gagner !
                         </div>
+                       
+                        <div><br></div>
                         <div class="row-6 p-3" id="id_line_4"></div>
                         <div class="row-6" id="id_line_5">
+                            
                             <ul class="list-group offset-1 col-9">
-                            <li class="list-group-item" aria-current="true">
+                            <li class="list-group-item" aria-current="true" id="id_group_régles">
                                 
                                 <a class="btn"  id="id_butt_1" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="true" aria-controls="collapse1"><h3>Les régles</h3></a></ul>
                                 <div class="collapse hide" id="collapse1">
@@ -83,8 +88,12 @@
                                 </div>
                                 
                         </div>
-                        <div class="row-6 p-2"  id="id_line_5"></div>
-                        <div class="row-6 p-2 rounded-bottom"  id="id_line_6"><button type="button" class="btn" id="id_butt_2" onclick="continu()">Continuer</button></div>
+                        <div class="row-6 p-2"  id="id_line_5">
+                            <div class="offset-4 col-8 row-6" id="avatar_1"></div>
+                        </div>
+                        <div class="row-6 p-2 rounded-bottom" id="id_line_6">
+                            <button type="button" class="btn" id="id_butt_2" onclick="continu()">Continuer</button>
+                        </div><div><br></div>
                         <div class="container text-md-center">
                             <div class="btn-group" role="group" aria-label="">
                                 <button type="button" class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">CGU</button>
@@ -93,15 +102,12 @@
                                 <button type="button" class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Plan du site</button>
                             </div>
                         </div>
-                </div>
+                        <br></div>
             <div class="col-1"></div>
         </div>
     </div>
-       
-
-        
         <footer>
-            <div class="container-fluid text-center bg-light">Powered by Sébastien</div>
+            <div class="container-fluid text-center" id="id_powered">Powered by Rémy et Sébastien</div>
 
             <div class="container" id="id_cards">
                 <div class="">
@@ -194,5 +200,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
